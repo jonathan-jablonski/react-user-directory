@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import UserDataset from "./components/UserDataset.js";
+import UserDataset from "./components/UserDataset/UserDataset.js";
 import Search from "./components/Search/Search.js";
 import "./App.css";
 
