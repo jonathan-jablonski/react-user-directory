@@ -2,3 +2,7 @@ form {
   width: 40%;
   margin: auto;
 }
+
+input {
+  background-color: antiquewhite;
+}

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import UserDataset from "../components/UserDataset/UserDataset";
-import Search from "./Search/Search";
-import API from "../utils/api.js";
+import UserDataset from "../UserDataset/UserDataset";
+import Search from "../Search/Search";
+import API from "../../utils/api.js";
 
 class UserResultsContainer extends Component {
   state = {
@@ -59,6 +59,7 @@ class UserResultsContainer extends Component {
         />
 
         <UserDataset
+          className="dataset"
           results={this.state.filteredResults}
           searchByName={this.searchByName}
         />
