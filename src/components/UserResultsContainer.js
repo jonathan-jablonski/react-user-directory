@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-import DataTable from "./DataTable/index";
-import Search from "./Search";
+import UserDataset from "../components/UserDataset/UserDataset";
+import Search from "./Search/Search";
 import API from "../utils/api.js";
 
-class EmployeeResultsContainer extends Component {
+class UserResultsContainer extends Component {
   state = {
     search: "",
     results: [],
@@ -39,8 +39,8 @@ class EmployeeResultsContainer extends Component {
   searchByName = (input) => {
     if (input !== "") {
       this.setState({
-        filteredResults: this.state.results.filter((person) => {
-          return person.name.first.toLowerCase().includes(input);
+        filteredResults: this.state.results.filter((user) => {
+          return user.name.first.toLowerCase().includes(input);
         }),
       });
       console.log(this.state.filteredResults);
@@ -58,7 +58,7 @@ class EmployeeResultsContainer extends Component {
           handleFormSubmit={this.handleFormSubmit}
         />
 
-        <DataTable
+        <UserDataset
           results={this.state.filteredResults}
           searchByName={this.searchByName}
         />
@@ -67,4 +67,4 @@ class EmployeeResultsContainer extends Component {
   }
 }
 
-export default EmployeeResultsContainer;
+export default UserResultsContainer;
