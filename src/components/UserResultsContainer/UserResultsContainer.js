@@ -67,7 +67,7 @@ class UserResultsContainer extends Component {
   };
 
   sortByDescending = (columnName) => {
-    console.log("double clicked");
+    console.log("double clicked", columnName);
     if (columnName === "First") {
       const data = this.state.results;
       data.sort((a, b) => {
@@ -96,7 +96,8 @@ class UserResultsContainer extends Component {
           className="dataset"
           results={this.state.filteredResults}
           searchByName={this.searchByName}
-          sort={this.sortByAscending}
+          ascending={this.sortByAscending}
+          descending={this.sortByDescending}
         />
       </>
     );

@@ -9,10 +9,10 @@ function UserDataset(props) {
           <th
             scope="col"
             onClick={(e) => {
-              props.sort("First");
+              props.ascending("First");
             }}
             onDoubleClick={(e) => {
-              props.sort("First");
+              props.descending("First");
             }}
           >
             First
