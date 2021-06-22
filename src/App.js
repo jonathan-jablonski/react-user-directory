@@ -7,7 +7,6 @@ function App() {
   return (
     <div className="webpage">
       <Header />
-      <Search />
       <UserResultsContainer />
     </div>
   );
