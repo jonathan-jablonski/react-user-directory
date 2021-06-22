@@ -1,12 +1,19 @@
 import "../UserDataset/style.css";
 
-function DataTable(props) {
+function UserDataset(props) {
   return (
     <table className="table table-striped">
       <thead>
         <tr>
           <th scope="col">Employee ID</th>
-          <th scope="col">First</th>
+          <th
+            scope="col"
+            onClick={(e) => {
+              props.sort("First");
+            }}
+          >
+            First
+          </th>
           <th scope="col">Last</th>
           <th scope="col">Email</th>
           <th scope="col">City</th>
@@ -29,4 +36,4 @@ function DataTable(props) {
   );
 }
 
-export default DataTable;
+export default UserDataset;

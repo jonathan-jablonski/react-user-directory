@@ -49,6 +49,23 @@ class UserResultsContainer extends Component {
     }
   };
 
+  sortByAscending = (columnName) => {
+    console.log(columnName);
+    if (columnName === "First") {
+      const data = this.state.results;
+      data.sort((a, b) => {
+        if (a.name.first > b.name.first) {
+          return 1;
+        } else {
+          return 0;
+        }
+      });
+      this.setState({
+        results: data,
+      });
+    }
+  };
+
   render() {
     return (
       <>
@@ -62,6 +79,7 @@ class UserResultsContainer extends Component {
           className="dataset"
           results={this.state.filteredResults}
           searchByName={this.searchByName}
+          sort={this.sortByAscending}
         />
       </>
     );
