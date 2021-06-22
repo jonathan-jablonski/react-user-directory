@@ -11,6 +11,9 @@ function UserDataset(props) {
             onClick={(e) => {
               props.sort("First");
             }}
+            onDoubleClick={(e) => {
+              props.sort("First");
+            }}
           >
             First
           </th>

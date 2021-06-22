@@ -66,6 +66,23 @@ class UserResultsContainer extends Component {
     }
   };
 
+  sortByDescending = (columnName) => {
+    console.log("double clicked");
+    if (columnName === "First") {
+      const data = this.state.results;
+      data.sort((a, b) => {
+        if (a.name.first < b.name.first) {
+          return 1;
+        } else {
+          return 0;
+        }
+      });
+      this.setState({
+        results: data,
+      });
+    }
+  };
+
   render() {
     return (
       <>
