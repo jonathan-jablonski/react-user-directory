@@ -15,10 +15,10 @@ function UserDataset(props) {
               props.descending("First");
             }}
           >
-            First
+            First Name
           </th>
-          <th scope="col">Last</th>
-          <th scope="col">Email</th>
+          <th scope="col">Last Name</th>
+          <th scope="col">Email Address</th>
           <th scope="col">City</th>
           <th scope="col">Country</th>
         </tr>
